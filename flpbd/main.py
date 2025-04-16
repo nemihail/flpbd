@@ -3,14 +3,21 @@ import time
 
 pygame.init()
 
+nenado = "pygame.display.set_icon(pygame.image.load('iconka.png'))"
+
 screen = pygame.display.set_mode((500, 400))
 pygame.display.set_caption('FLPBD')
-pygame.display.set_icon(pygame.image.load('iconka.png'))
 
 b_pos = 200
 grav = 0
 
 pygame.draw.circle(screen, 'red', (100, b_pos), 15)
+
+
+def draw_column(x, y):
+    pygame.draw.rect(screen, 'white', (x, y))
+    pass
+
 
 main_while = True
 while main_while:
